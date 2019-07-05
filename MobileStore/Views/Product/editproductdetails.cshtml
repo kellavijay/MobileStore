@@ -1,0 +1,92 @@
+﻿
+@model MobileStore.ViewModels.ProductViewModel
+@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
+
+@{
+    Layout = "_Layout";
+}
+
+
+<form enctype="multipart/form-data" asp-action="editproductdetails" method="post">
+    <div class="container">
+        <div class="hedingdiv container text-center">
+            <h5>Edit <strong style="color:green">@Model._mobileobj.Name</strong> Details</h5>
+        </div>
+
+        <div class="contentdiv row">
+
+            <div class="lbldiv col-md-4">
+                <label asp-for="@Model._mobileobj.Name"></label>
+            </div>
+            <div class="col-md-4">
+                <input class="form-control" asp-for="@Model._mobileobj.Name" />
+            </div>
+            <div class="col-md-4">
+                <span asp-validation-for="@Model._mobileobj.Name"></span>
+            </div>
+        </div>
+        <div class="contentdiv row">
+
+            <div class="lbldiv col-md-4">
+                <label asp-for="@Model._mobileobj.Price"></label>
+            </div>
+            <div class="col-md-4">
+                <input class="form-control" asp-for="@Model._mobileobj.Price" />
+            </div>
+            <div class="col-md-4">
+                <span asp-validation-for="@Model._mobileobj.Price"></span>
+            </div>
+        </div>
+        <div class="contentdiv row">
+            <div class="lbldiv col-md-4">
+                <label asp-for="@Model._mobileobj.TinyDescription"></label>
+            </div>
+            <div class="col-md-4">
+                <textarea class="form-control" asp-for="@Model._mobileobj.TinyDescription"></textarea>
+            </div>
+            <div class="col-md-4">
+                <span asp-validation-for="@Model._mobileobj.TinyDescription"></span>
+            </div>
+        </div>
+        <div class="contentdiv row">
+            <div class="lbldiv col-md-4">
+                <label asp-for="@Model._mobileobj.FullDescription">Tiny Description </label>
+            </div>
+            <div class="col-md-4">
+                <textarea class="form-control" asp-for="@Model._mobileobj.FullDescription"></textarea>
+            </div>
+            <div class="col-md-4">
+                <span asp-validation-for="@Model._mobileobj.FullDescription"></span>
+            </div>
+        </div>
+        <div class="contentdiv row">
+            <div class="lbldiv col-md-4">
+                <label asp-for="Photo"></label>
+            </div>
+            <div class="col-md-4">
+                <input class="form-control custom-file-input" asp-for="Photo" />
+                <label class="custom-file-label">choose File...</label>
+            </div>
+            <div class="col-md-4">
+             
+            </div>
+        </div>
+
+        <div class="savebtndiv row">
+            <div class="col-md-4">
+
+            </div>
+            <div class="col-md-4">
+                <input class="btn-primary" type="submit" value="Save" />
+            </div>
+            <div class="col-md-4">
+            </div>
+        </div>
+
+ 
+
+
+    </div>
+   
+</form>
+

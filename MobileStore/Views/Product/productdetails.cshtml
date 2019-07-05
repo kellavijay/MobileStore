@@ -1,0 +1,65 @@
+﻿
+@model MobileStore.ViewModels.ProductViewModel
+@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
+
+@{
+    Layout = "_Layout";
+}
+<div class="vcex-spacing" style="height:20px"></div>
+
+<div class="container" id="product-section">
+    <div class="row">
+        <div class="col-md-6">
+            <img class="image-responsive" src="/images/@Model._mobileobj.ImageUrl"  asp-append-version="true" alt="@Model._mobileobj.FullDescription"  />
+        </div>
+        <div class="col-md-6">
+
+            <div class="row">
+                <div class="col-md-12">
+                    <h1 style="color:#009fe2;font-weight:700;text-transform:capitalize;"><span class="vcex-heading-inner clr">@Model._mobileobj.Name</span></h1>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-md-12">
+                    <span class="monospaced">@Model._mobileobj.Name</span>
+                </div>
+            </div><!-- end row -->
+            <div class="row">
+                <div class="col-md-12">
+                    <p class="description">
+                        @Model._mobileobj.TinyDescription
+                    </p>
+                </div>
+            </div><!-- end row -->
+            <div class="row">
+                <div class="col-md-12 bottom-rule">
+                    <h2 class="product-price">@Model._mobileobj.Price</h2>
+                </div>
+            </div><!-- end row -->
+
+            <div class="row add-to-cart">
+                <div class="col-md-5">
+                    <input type="number" value="1" min="1" max="3" step="1" />
+                </div>
+                <div class="col-md-7">
+                    <button class="btn btn-lg btn-brand btn-full-width">
+                        Add to Cart
+                    </button>
+                    <a asp-controller="Product" asp-action="editproductdetails"asp-routeid="@Model._mobileobj.Id">Edit</a>
+                </div>
+            </div><!-- end row -->
+
+             <input type="hidden" value="@Model._mobileobj.Id"  />
+
+        </div>
+        </div><!-- end row -->
+</div><!-- end container -->
+
+
+
+
+
+
+
+

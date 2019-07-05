@@ -1,0 +1,85 @@
+﻿
+@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>The Mobile Store</title>
+    <environment include="Development">
+        <link href="~/lib/twitter-bootstrap/css/bootstrap.css" rel="stylesheet" />
+    </environment>
+    <environment include="Staging,Production">
+        <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    </environment>
+    <link href="~/lib/css/site.css" rel="stylesheet" />
+    <script src="~/lib/jquery/jquery.js"></script>
+    <script src="~/lib/twitter-bootstrap/js/bootstrap.min.js"></script>
+    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+
+</head>
+<body>
+    <header>
+        <div id="top-bar-wrap">
+            <div id="top-bar" class="container">
+                <div id="top-bar-content">
+                    <span class="ticon ticon-phone" style="color:#000;margin-right:5px;"></span>9030718891 <span class="ticon ticon-envelope" style="color:#000;margin-left:20px;margin-right:5px;"></span>
+                    kellvijay@gmail.com
+                    <span class="ticon ticon-globe" style="color:#000;margin-left:20px;margin-right:5px;"></span>
+                    www.mobilestore.com
+                </div><!-- #top-bar-content -->
+                <div id="top-bar-social" class="clr top-bar-right">
+                    <ul id="top-bar-social-list">
+                        <li><a href="https://twitter.com/MobileStoreLTD" title="Twitter" target="_blank" class="wpex-twitter wpex-social-btn wpex-social-btn-no-style"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+                        <li><a href="https://www.facebook.com/mobile.store.hitchin" title="Facebook" target="_blank" class="wpex-facebook wpex-social-btn wpex-social-btn-no-style"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+                        <li><a href="http://instagram.com/the.mobile.store/" title="Instagram" target="_blank" class="wpex-instagram wpex-social-btn wpex-social-btn-no-style"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
+                    </ul>
+                </div><!-- #top-bar-social -->
+            </div><!-- #top-bar -->
+        </div>
+        <nav class="navbar navbar-expand-sm">
+            <!-- Brand -->
+
+        </nav>
+
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <img class="logoimg m-1 p-1" src="~/Images/logo.png" /> <a class="navbar-brand" asp-controller="Home" asp-action="Index"> <h3 class="ptitle"><strong>The Mobile Store</strong></h3></a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <!-- Links -->
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" asp-controller="Home" asp-action="Index">HOME</a>
+                    </li>
+                    <!-- Dropdown -->
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
+                            SHOP
+                        </a>
+                        <div class="dropdown-menu">
+                            <a class="dropdown-item" href="#">Link 1</a>
+                            <a class="dropdown-item" href="#">Link 2</a>
+                            <a class="dropdown-item" href="#">Link 3</a>
+                        </div>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">CONTACT</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">LOGIN</a>
+                    </li>
+
+
+                </ul>
+
+            </div>
+        </nav>
+
+    </header>
+    <div>
+        @RenderBody()
+    </div>
+</body>
+</html>
