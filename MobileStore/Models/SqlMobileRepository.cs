@@ -1,7 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
+﻿using System.Collections.Generic;
 
 namespace MobileStore.Models
 {
@@ -12,7 +9,6 @@ namespace MobileStore.Models
         public SqlMobileRepository(AppDbContext _context)
         {
             this.context = _context;
-
         }
 
         public Mobile Add(Mobile mobile)
